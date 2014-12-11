@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "ALXS | Web Design" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+                <nav class="tab-bar">
+      <section class="left-small">
+        <a class="menu-icon" id="menu-toggle"><span></span></a>
+      </section>
+
+      <section class="middle tab-bar-section">
+        <h1 class="title">ALXS Foundation Sidebar</h1>
+      </section>
+
+    </nav>
+    <div id="wrapper">
+            <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        ALXS Sidebar
+                    </a>
+                </li>
+                <li>
+                    <a href="#" alt="Dashboard">Dashboard<span class="fi-wrench" alt="Dashboard"></span></a>
+                </li>
+                <li>
+                    <a href="#" alt="Shortcuts">Shortcuts<span class="fi-link" alt="Shortcuts"></a>
+                </li>
+                <li>
+                    <a href="#">Overview<span class="fi-clipboard-notes" alt="Overview"></a>
+                </li>
+                <li>
+                    <a href="#">Events<span class="fi-calendar" alt="Events"></a>
+                </li>
+                <li>
+                    <a href="#">About<span class="fi-comments" alt="About"></a>
+                </li>
+                <li>
+                    <a href="#">Services<span class="fi-thumbnails" alt="Services"></a>
+                </li>
+                <li>
+                    <a href="#">Contact<span class="fi-address-book" alt="Contact"></a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        
+        <!-- Page Content -->
+        <%= yield %>
+        <!-- /#page-content-wrapper -->
+      </div>
+    </div>
+    
+</div>
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>
