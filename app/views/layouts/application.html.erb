@@ -7,70 +7,62 @@
     <title><%= content_for?(:title) ? yield(:title) : "ALXS | Web Design" %></title>
 
     <%= stylesheet_link_tag    "application" %>
-    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Roboto+Condensed%3A400%2C300%2C300italic%2C400italic%2C700%2C700italic&#038;ver=3.9.3' type='text/css' media='all' />
-	<link rel='stylesheet' href='//fonts.googleapis.com/css?family=Roboto%3A400%2C300%2C700&#038;ver=3.9.3' type='text/css' media='all' />
-    
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
-	<div id="page">
-		<div id="wrapper">
-			<div id="secondary">
-				<div class="header">
-					<div class="logo">
-						<h1 class="site-title">
-							<a href="#" rel="home">
-								ALXS DESIGN
-							</a>
-						</h1>
-						<h2 class="site-description"></h2>
-						<br>
-					</div>
-					<!-- End Logo -->
-					<div id="site-nav">
-						<div class="screen-reader-text skip-link">
-							<a href="#content">Skip to content</a>
-						</div>
-						<div class="navigation-links">
-							<dl data-accordion="" class="accordion">
-								<a href="#">HOME</a>          
-								<dd class="nav">
-									<a class="hasContent" href="#panel1">Projects</a>
-									<div id="panel1" class="content">
-										<a href="#">ZURB Templates</a>           
-									</div>
-								</dd>
-								<dd class="nav">
-									<a class="hasContent" href="#panel2">Link 3</a>
-									<div id="panel2" class="content">
-										<a href="#">Link 3-1</a>            
-										<a href="#">Link 3-2</a>      
-									</div>
-								</dd>
-							</dl>
-						</div>
-					</div>
-					<!-- End Site Nav -->
-					<div class="header-bottom">
-						<div id="header-bottom-shape" class="">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="primary">
-			<div id="content" class="site-content container">
-			<main id="main" class="site-main" role="main">
-			<%= yield %>
-			</main>
-			</div>
-			</div>
-		</div>
-	</div>
+                <nav class="tab-bar">
+      <section class="left-small">
+        <a class="menu-icon" id="menu-toggle"><span></span></a>
+      </section>
+
+      <section class="middle tab-bar-section">
+        <h1 class="title">ALXS Foundation Sidebar</h1>
+      </section>
+
+    </nav>
+    <div id="wrapper">
+            <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        ALXS Sidebar
+                    </a>
+                </li>
+                <li>
+                    <a href="#" alt="Dashboard">Dashboard<span class="fi-wrench" alt="Dashboard"></span></a>
+                </li>
+                <li>
+                    <a href="#" alt="Shortcuts">Shortcuts<span class="fi-link" alt="Shortcuts"></a>
+                </li>
+                <li>
+                    <a href="#">Overview<span class="fi-clipboard-notes" alt="Overview"></a>
+                </li>
+                <li>
+                    <a href="#">Events<span class="fi-calendar" alt="Events"></a>
+                </li>
+                <li>
+                    <a href="#">About<span class="fi-comments" alt="About"></a>
+                </li>
+                <li>
+                    <a href="#">Services<span class="fi-thumbnails" alt="Services"></a>
+                </li>
+                <li>
+                    <a href="#">Contact<span class="fi-address-book" alt="Contact"></a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        
+        <!-- Page Content -->
+        <%= yield %>
+        <!-- /#page-content-wrapper -->
+      </div>
+    </div>
+    
+</div>
     <%= javascript_include_tag "application" %>
-    <script>
-      $(document).foundation();
-    </script>
   </body>
 </html>
